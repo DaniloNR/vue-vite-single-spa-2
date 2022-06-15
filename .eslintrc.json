@@ -1,0 +1,23 @@
+{
+  "root": true,
+  "extends": ["eslint:recommended", "plugin:vue/vue3-recommended", "prettier"],
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": { "project": ["./tsconfig.json"] },
+    "sourceType": "module"
+  },
+  "overrides": [
+    {
+      "files": ["*.vue", "*.ts"],
+      "excludedFiles": "*.spec.ts",
+      "rules": {
+        "no-unused-vars": 0
+      }
+    }
+  ],
+  "plugins": ["pug"],
+  "env": {
+    "node": true
+  }
+}
